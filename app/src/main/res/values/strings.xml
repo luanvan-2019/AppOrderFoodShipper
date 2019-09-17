@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AppOrderFoodShipper</string>
+    <string name="app_name">Shipper</string>
+    <string name="map_key" translatable="false">AIzaSyC3Ch79NUCRLxToyz2Byjo-V0yDEpNH6g8</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

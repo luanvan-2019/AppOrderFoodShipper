@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.OrderTrackingActivity">
+    <fragment
+        android:id="@+id/fragment_maps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:fontFamily="@font/robotoregular"
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Khoảng cách :"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="125dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1km"
+            android:textSize="17dp"/>
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:text="Thời gian :"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1"/>
+        <TextView
+            android:layout_below="@id/txt1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="125dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20 phút"
+            android:textSize="17dp"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@drawable/round_button_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gọi"
+                android:textAllCaps="false"
+                android:layout_marginRight="20dp"/>
+            <Button
+                android:background="@drawable/round_button_light"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đã giao"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
