@@ -1,4 +1,4 @@
-package com.hcmunre.apporderfoodshipper.views;
+package com.hcmunre.apporderfoodshipper.views.activities;
 
 import android.os.Bundle;
 

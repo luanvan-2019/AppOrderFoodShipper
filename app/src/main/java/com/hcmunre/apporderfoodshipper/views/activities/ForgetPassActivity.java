@@ -1,4 +1,4 @@
-package com.hcmunre.apporderfoodshipper.views;
+package com.hcmunre.apporderfoodshipper.views.activities;
 
 import android.os.Bundle;
 
@@ -7,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hcmunre.apporderfoodshipper.R;
 
-public class SignInActivity extends AppCompatActivity {
+public class ForgetPassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_forgetpass);
     }
 }

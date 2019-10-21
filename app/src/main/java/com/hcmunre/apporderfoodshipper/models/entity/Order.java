@@ -1,4 +1,4 @@
-package com.hcmunre.apporderfoodshipper.models;
+package com.hcmunre.apporderfoodshipper.models.entity;
 
 public class Order {
     private String mOrderId;

@@ -56,7 +56,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editMatkhau"
+                android:id="@+id/editPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mật khẩu"
@@ -65,7 +65,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/btndangnhap"
+            android:id="@+id/btnSignin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_shape"
@@ -75,6 +75,12 @@
             android:textSize="13sp"
             android:textColor="#ffffff"
             android:textStyle="bold"/>
+        <ProgressBar
+            android:indeterminateTint="#2196F3"
+            android:id="@+id/progress_login"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
@@ -88,7 +94,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtDangki"
+            android:id="@+id/txtSignup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -97,7 +103,7 @@
             android:textSize="14dp" />
 
         <TextView
-            android:id="@+id/txtforget"
+            android:id="@+id/txtForgetPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quên mật khẩu?"
