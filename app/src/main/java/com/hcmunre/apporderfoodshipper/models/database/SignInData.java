@@ -1,7 +1,6 @@
 package com.hcmunre.apporderfoodshipper.models.database;
 
 import com.hcmunre.apporderfoodshipper.commons.Common;
-import com.hcmunre.apporderfoodshipper.models.database.DataConnetion;
 import com.hcmunre.apporderfoodshipper.models.entity.Shipper;
 
 import java.sql.Connection;
@@ -18,20 +17,20 @@ public class SignInData {
             if (con == null) {
                 z = "Vui lòng kiểm tra kết nối";
             } else {
-                String query = "Exec Sp_SelectShipperLogin '" + shipper.getEmail().toString() + "','" + shipper.getPassword().toString() + "'";
+                String sql = "Exec Sp_SelectShipperLogin '" + shipper.getEmail().toString() + "','" + shipper.getPassword().toString() + "'";
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery(query);
+                ResultSet rs = stmt.executeQuery(sql);
                 if (rs.next()) {
-                    Common.currentshipper=new Shipper();
-                    Common.currentshipper.setId(rs.getInt("Id"));
-                    Common.currentshipper.setName(rs.getString("Name"));
-                    Common.currentshipper.setAddress(rs.getString("Address"));
-                    Common.currentshipper.setPhone(rs.getString("Phone"));
-                    Common.currentshipper.setLat(rs.getFloat("Lat"));
-                    Common.currentshipper.setLng(rs.getFloat("Lng"));
-                    Common.currentshipper.setImage(rs.getString("Image"));
-                    Common.currentshipper.setEmail(rs.getString("Email"));
-                    Common.currentshipper.setPassword(rs.getString("Password"));
+                    Common.currentShipper =new Shipper();
+                    Common.currentShipper.setId(rs.getInt("Id"));
+                    Common.currentShipper.setName(rs.getString("Name"));
+                    Common.currentShipper.setAddress(rs.getString("Address"));
+                    Common.currentShipper.setPhone(rs.getString("Phone"));
+                    Common.currentShipper.setLat(rs.getFloat("Lat"));
+                    Common.currentShipper.setLng(rs.getFloat("Lng"));
+                    Common.currentShipper.setImage(rs.getString("Image"));
+                    Common.currentShipper.setEmail(rs.getString("Email"));
+                    Common.currentShipper.setPassword(rs.getString("Password"));
                     z = "success";
                     con.close();
                 } else {

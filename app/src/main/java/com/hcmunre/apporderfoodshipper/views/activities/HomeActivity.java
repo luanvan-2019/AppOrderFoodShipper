@@ -10,12 +10,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ReportFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.hcmunre.apporderfoodshipper.R;
+import com.hcmunre.apporderfoodshipper.commons.Common;
 import com.hcmunre.apporderfoodshipper.views.fragments.AccountFragment;
 import com.hcmunre.apporderfoodshipper.views.fragments.HomeFragment;
 
 public class HomeActivity extends AppCompatActivity {
-        @Override
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
@@ -25,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
         }
+        FirebaseMessaging.getInstance().subscribeToTopic(Common.getTopicChannelShippper(PreferenceUtilsShipper.getUserId(this)));
 
     }
 

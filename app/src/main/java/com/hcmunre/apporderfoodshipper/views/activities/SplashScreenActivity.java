@@ -2,8 +2,10 @@ package com.hcmunre.apporderfoodshipper.views.activities;
 
 import android.Manifest;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,12 +17,18 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.single.PermissionListener;
 
-public class SplashScreenActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
+public class SplashScreenActivity extends AppCompatActivity {
+    @BindView(R.id.txtShipper)
+    TextView txtShipper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splashscreen);
+        ButterKnife.bind(this);
+        init();
         Dexter.withActivity(this)
                 .withPermission(Manifest.permission.ACCESS_FINE_LOCATION)
                 .withListener(new PermissionListener() {
@@ -32,7 +40,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                                 startActivity(new Intent(SplashScreenActivity.this, SignInActivity.class));
                                 finish();
                             }
-                        }, secondsDelayed * 3000);
+                        }, secondsDelayed * 2000);
                     }
 
                     @Override
@@ -45,5 +53,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
                     }
                 }).check();
+    }
+    private void init() {
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "fonts/fontsplash.ttf");
+        txtShipper.setTypeface(face);
     }
 }

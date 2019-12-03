@@ -1,47 +1,103 @@
 package com.hcmunre.apporderfoodshipper.models.entity;
 
+import java.sql.Date;
+
 public class Order {
-    private String mOrderId;
-    private String mOrderName;
-    private String mQuantity;
-    private String mPrice;
+    private int orderId,userId,restaurantId,orderStatus;
+    private String orderName,orderPhone,orderAddress;
+    private Date orderDate;
+    private Float totalPrice;
+    private int numberOfItem;
+    private int payment;
 
-    public Order(String mOrderId, String mOrderName, String mQuantity, String mPrice) {
-        this.mOrderId = mOrderId;
-        this.mOrderName = mOrderName;
-        this.mQuantity = mQuantity;
-        this.mPrice = mPrice;
+    public Order() {
     }
 
-    public String getmOrderId() {
-        return mOrderId;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setmOrderId(String mOrderId) {
-        this.mOrderId = mOrderId;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 
-    public String getmOrderName() {
-        return mOrderName;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setmOrderName(String mOrderName) {
-        this.mOrderName = mOrderName;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getmQuantity() {
-        return mQuantity;
+    public int getRestaurantId() {
+        return restaurantId;
     }
 
-    public void setmQuantity(String mQuantity) {
-        this.mQuantity = mQuantity;
+    public void setRestaurantId(int restaurantId) {
+        this.restaurantId = restaurantId;
     }
 
-    public String getmPrice() {
-        return mPrice;
+    public int getOrderStatus() {
+        return orderStatus;
     }
 
-    public void setmPrice(String mPrice) {
-        this.mPrice = mPrice;
+    public void setOrderStatus(int orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String getOrderName() {
+        return orderName;
+    }
+
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
+    }
+
+    public String getOrderPhone() {
+        return orderPhone;
+    }
+
+    public void setOrderPhone(String orderPhone) {
+        this.orderPhone = orderPhone;
+    }
+
+    public String getOrderAddress() {
+        return orderAddress;
+    }
+
+    public void setOrderAddress(String orderAddress) {
+        this.orderAddress = orderAddress;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public Float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Float totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public int getNumberOfItem() {
+        return numberOfItem;
+    }
+
+    public void setNumberOfItem(int numberOfItem) {
+        this.numberOfItem = numberOfItem;
+    }
+
+    public int getPayment() {
+        return payment;
+    }
+
+    public void setPayment(int payment) {
+        this.payment = payment;
     }
 }
